@@ -1,0 +1,3 @@
+const isSuccessReinforced = (item, reinforcementStone) => {
+
+}
