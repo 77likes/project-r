@@ -91,7 +91,7 @@ const normalAccessaryChance = {
   }
 };
 
-const chance = {
+const SUCCESS_CHANCE = {
   "normal": {
     "weapon": {
       "successChance": {
@@ -271,4 +271,13 @@ const chance = {
   }
 }
 
-export default chance;
+const CHANCE_TYPE = {
+  SUCCESS: 'successChance',
+  IVALDI: 'ivaldiChance',
+}
+
+
+export {
+  CHANCE_TYPE,
+  SUCCESS_CHANCE,
+};
