@@ -1,13 +1,15 @@
 import { useState } from "react"
 import { isSuccessReinforced } from '../business/isSuccessReinforced'
 
+const defaultItem = {
+  grade: 'normal',
+  type: 'weapon',
+  reinforced: 0,
+  isLive: true,
+}
+
 function Test() {
-  const [item, setItem] = useState({
-    grade: 'normal',
-    type: 'weapon',
-    reinforced: 0,
-    isLive: true,
-  })
+  const [item, setItem] = useState({...defaultItem})
 
   const onClickReinforce = () => {
     const result = isSuccessReinforced(item);
@@ -16,6 +18,10 @@ function Test() {
       ...item,
       ...futureItem
     })
+  }
+
+  const onClickResetItem = () => {
+    setItem({...defaultItem});
   }
 
   return <div>
@@ -34,7 +40,7 @@ function Test() {
 
       <div>
         <div>"아이템이 파괴되었습니다."</div>
-        <a href="">다시하기</a>
+        <button onClick={onClickResetItem}>다시하기</button>
       </div>
     }
   </div>
