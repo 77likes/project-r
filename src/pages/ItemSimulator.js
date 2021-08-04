@@ -1,7 +1,13 @@
 import React from 'react';
 
+import { Test } from '../components'
+
 function ItemSimulator(props) {
-  return <div>item simulator</div>;
+  return (
+    <div>
+      <Test/>
+    </div>
+  );
 }
 
 export default ItemSimulator;
